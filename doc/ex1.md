@@ -35,6 +35,9 @@ id会显示用户以及所属群组的实际与有效ID。若两个ID相同，�
 #### 实验原理：
 执行exec后，进程ID没有改变，但新程序从调用进程继承了文件描述符的状态（除非特地用fcntl设置了关闭标志）
 文件句柄打开后没有及时关闭
+
+### getuid()获取实际用户id
+### geteuid()获取有效用户id
 ```c
 #include <unistd.h>
 #include <stdio.h>
