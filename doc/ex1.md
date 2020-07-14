@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
 }
 ```
  ![pic5](./assets/4.png)
-
+###### 有些实现通过更改/bin/sh，当有效用户ID与实际用户ID不匹配时，将有效用户ID设置为实际用户ID，这样可以关闭安全漏洞。
 In Ubuntu 16.04, /bin/sh points to /bin/dash, which has a countermeasure
 It drops privilege when it is executed inside a set-uid process
  ![pic6](./assets/5.png)
