@@ -70,7 +70,7 @@ void main()
  ![pic4](./assets/3.png)
 
 ##### 实验4：没成功
-
+#### 实验原理：仅当对程序文件设置了设置用户ID位时，exec函数才设置有效用户ID（EUID）
 ```c
 #include<stdio.h>
 #include<string.h>
