@@ -1,5 +1,5 @@
 #### 1.实验原理
- ![pic1](./assets/8.png)
+![8.png](https://i.loli.net/2021/03/09/GvbAgRHKmMkdqWn.png)
 
 
 #### 2.实验环境：
@@ -38,13 +38,13 @@ int main(int argc, char*argv[], char* envp[])
 
 }
 ```
- ![pic1](./assets/10.png)
+![10.png](https://i.loli.net/2021/03/09/tWgfrHMcilEoPaY.png)
 
 ##### 实验2 shell 变量和环境变量
 
- ![pic1](./assets/7.png)
- ![pic1](./assets/9.png)
- ![pic1](./assets/11.png)
+![7.png](https://i.loli.net/2021/03/09/VfyQ2uIjHk6JPev.png)
+![9.png](https://i.loli.net/2021/03/09/K9fSysVRv54l2PB.png)
+![11.png](https://i.loli.net/2021/03/09/lsPLecraJEm2RHq.png)
 
 ##### 实验3 动态链接环境变量LD_PRELOAD
 
@@ -71,12 +71,13 @@ void sleep(int s)
 ```
 
 * 将sleep.c编译成动态链接库 libmylib.so.1.0.1并加入LD_PRELOAD环境变量中
-![pic1](./assets/12.png)
-![pic1](./assets/13.png)
+
+![12.png](https://i.loli.net/2021/03/09/yRdnp1sFVQStJzb.png)
+![13.png](https://i.loli.net/2021/03/09/T91WVrMaQEYoIOf.png)
 
 * 当EUID和RUID不同时，LD_PRELOAD环境变量被忽视
-  ![pic1](./assets/14.png)
-  ![pic1](./assets/15.png)
+![14.png](https://i.loli.net/2021/03/09/pAIQvto4Hk9Xjhb.png)
+![15.png](https://i.loli.net/2021/03/09/tFiNB3bkvCY4AdM.png)
 
 ##### 实验4 外部程序注入
 ```c
@@ -103,8 +104,8 @@ int main(int argc, char*argv[], char* envp[])
 
 * 修改PATH
   
-![pic1](./assets/17.png)
-![pic1](./assets/16.png)
+![17.png](https://i.loli.net/2021/03/09/NDFZXYyphS48J6x.png)
+![16.png](https://i.loli.net/2021/03/09/zQjCJVHv8BPKmRc.png)
 * ppt中这里获得了root权限，本次实验结果是用户权限
 
 #### 4.总结
