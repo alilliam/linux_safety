@@ -20,7 +20,7 @@ chmod 4755 filename中的第一位数4表示高位特殊权限（Set-UID比特�
 
 主要有三种高位特殊权限 S ：SUID SGID SBIT
 
- ![pic1](./assets/1.png)
+![1.png](https://i.loli.net/2021/03/08/3O8EAWRcPYlvTQj.png)
 
  SUID 4 :当一个设置了SUID 位的可执行文件被执行时，该文件将以所有者的身份运行，也就是说无论谁来执行这个文件，他都有文件所有者的特权。如果所有者是 root 的话，那么执行人就有超级用户的特权了。（对文件进行操作，eg：修改密码的时候除了root用户可以修改密码，普通用户可以修改密码，原因就是因为采用了SUID，普通用户以root用户的权限来执行修改密码的操作）
 
@@ -29,7 +29,7 @@ chmod 4755 filename中的第一位数4表示高位特殊权限（Set-UID比特�
 Linux id命令用于显示用户的ID，以及所属群组的ID。
 id会显示用户以及所属群组的实际与有效ID。若两个ID相同，则仅显示实际ID。若仅指定用户名称，则显示目前用户的ID。
 
- ![pic2](./assets/2.png)
+![2.png](https://i.loli.net/2021/03/08/AG3lcf74KxHkhOo.png)
 
 ##### 实验3：资源泄露
 ###### 实验原理：
@@ -69,8 +69,9 @@ void main()
 }
 
 ```
- ![pic3](./assets/3a.png)
- ![pic4](./assets/3.png)
+![3a.png](https://i.loli.net/2021/03/09/oZcWp2OPzl9BuQ3.png)
+![3.png](https://i.loli.net/2021/03/08/S3fsDmnJHh47gyw.png)
+
 
 ##### 实验4：没成功
 ###### 实验原理：仅当对程序文件设置了设置用户ID位时，exec函数才设置有效用户ID（EUID）
@@ -93,11 +94,15 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
- ![pic5](./assets/4.png)
+
+![4.png](https://i.loli.net/2021/03/09/VmbWf1n7DuQFkCR.png)
+
 ###### 有些实现通过更改/bin/sh，当有效用户ID与实际用户ID不匹配时，将有效用户ID设置为实际用户ID，这样可以关闭安全漏洞。
 In Ubuntu 16.04, /bin/sh points to /bin/dash, which has a countermeasure
 It drops privilege when it is executed inside a set-uid process
- ![pic6](./assets/5.png)
+
+![5.png](https://i.loli.net/2021/03/09/scxetTUWoig4Av3.png)
+
 
 #### 4.总结
 
